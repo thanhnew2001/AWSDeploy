@@ -8,6 +8,9 @@ app.use(bodyParser.json())
 
 const url = "mongodb+srv://thanh:thanh@cluster0.ntvke.mongodb.net/mydb?retryWrites=true&w=majority"
 
+const cors = require('cors')
+
+app.use(cors())
 
 mongoose.connect(url)
 
