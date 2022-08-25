@@ -1,8 +1,14 @@
 var app = require('express')()
 var mongoose = require('mongoose')
 var bodyParser = require('body-parser')
+const cors = require('cors');
+
 app.use(bodyParser.json())
  
+app.use(cors({
+    origin: '*'
+}));
+
 const url = "mongodb+srv://admin:admin@cluster0.mnwyjpj.mongodb.net/db1?retryWrites=true&w=majority"
 mongoose.connect(url)
  
